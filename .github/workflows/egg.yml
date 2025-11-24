@@ -9,7 +9,11 @@ jobs:
     job1:
         runs-on: windows-2025
         steps:
-         - uses: actions/checkout@v2
-    
-         - run: python --version
-         - run: python ./a.py
+            - name: Checkout
+              uses: actions/checkout@v6.0.0
+            - name: Set up Python
+             uses: actions/setup-python@v2 # 用于设置 Python 环境，它允许你指定要在工作环境中使用的 Python 版本
+             with:
+               python-version: '3.9'  # 选择要用的Python版本
+            - run: python --version
+            - run: python ./a.py
