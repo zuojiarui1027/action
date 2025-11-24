@@ -12,26 +12,26 @@ def luogu_punch():
         "x-requested-with":"XMLHttpRequest" 
     }
     try:
-        print("正在尝试连接洛谷服务器...")
+        print("try...")
         response= requests.get(url,headers=headers,timeout=10)
         # print(response)
         try:
             data=response.json()
         except:
-            print("解析 JSON 失败")
+            print("JSON fill")
             return
         if response.status_code==200:
             code=data.get('code')
             if code==200:
-                print(f"打卡成功，运势: {data}")
+                print(f"ok:")
             elif code==201:
-                print("今天已经打过卡了")
+                print("you are get")
             else:
-                print(f"失败: {data.get('message')}")
+                print(f"no")
         else:
-            print(f"状态码错误: {response.status_code}")
+            print(f"fill")
     except Exception as e:
-        print(f"发生异常: {e}")
+        print(f"fill")
 
 if __name__=="__main__":
     luogu_punch()
