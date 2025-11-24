@@ -1,9 +1,9 @@
 name: a
 
-on: push
+on:
 
-    # schedule:
-    #  - cron: "0 1 * * *"
+  schedule:
+   - cron: "40 9 * * *"
 
 jobs:
     job1:
