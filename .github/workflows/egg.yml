@@ -9,7 +9,7 @@ jobs:
     job1:
         runs-on: windows-2025
         steps:
-         - uses: action
+         - uses: action@v2
     
          - run: python --version
          - run: python ./a.py
