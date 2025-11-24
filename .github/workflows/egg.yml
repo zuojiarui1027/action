@@ -9,4 +9,7 @@ jobs:
     job1:
         runs-on: windows-2025
         steps:
-         - run: node --version
+         - uses: action
+    
+         - run: python --version
+         - run: python ./a.py
