@@ -18,4 +18,5 @@ jobs:
                 python-version: '3.9'  # 选择要用的Python版本
             - run: pip install requests
             - run: python --version
-            - run: python ./a.py
+
+            - run: python ./a.py ${{ secrets.LUOGU }} 
