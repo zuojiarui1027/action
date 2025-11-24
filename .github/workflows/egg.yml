@@ -1,0 +1,11 @@
+name: a
+
+on:
+    schedule:
+     - cron: "0 1 * * *"
+
+jobs:
+    job1:
+        runs-on: windows-2025
+        steps:
+         - run: node --version
